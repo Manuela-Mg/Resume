@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RESUME</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <div class="background">
+            <div id="sun"></div>
+            <div id="moon">
+                <div id="moonfiller">
+                    <div id="moontocroissant"></div>
+                </div>
+            </div>
+            <div class="stars">
+                <div id="cleopatrastar"></div>
+                <div id="star1"></div>
+                <div id="star2"></div>
+                <div id="star3"></div>
+                <div id="star4"></div>
+                <div id="star5"></div>
+                <div id="star6"></div>
+                <div id="star7"></div>
+                <div id="star8"></div>
+                <div id="star9"></div>
+                <div id="star10"></div>
+                <div id="star11"></div>
+                <div id="star12"></div>
+            </div>
+            <div class="mountains">
+                <div id="mountain1"></div>
+                <div id="mountain2"></div>
+                <div id="mountain3"></div>
+                <div id="mountain4"></div>
+                <div id="mountain5"></div>
+                <div id="mountain6"></div>
+                <div id="mountain7"></div>
+                <div id="mountain8"></div>
+            </div>
+            <div class="wishmaker">
+                <div class="wishstar">
+                    <div id="wish"></div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="logo-cnt"> 
+                <img src="img/hv.png" alt="logo">
+            </div>
+            <nav class="navbar">
+                <div class="menu" id="menuBtn">
+                    <i class="fa-solid fa-bars menu-button"></i>
+                </div>
+                <div id="popUp" class="pop-up">
+                        <ul class="pop-cnt">
+                            <li><a href="resume.html">Profil</a></li>
+                            <li class="active"><a href="skills.html">Savoirs</a></li>
+                            <li><a href="experience.html">Expériences</a></li>
+                            <li><a href="contact.html">Contacts</a></li>
+                        </ul>
+
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="resume.html">Profil</a></li>
+                        <li class="active"><a href="skills.html">Savoirs</a></li>
+                        <li><a href="experience.html">Expériences</a></li>
+                        <li><a href="contact.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="skills-section">
+                <div id="skillsCnt" class="skills-cnt">
+                    <div class="skills-heading">
+                        <h2>COMPETENCES</h2>
+                        <p>C & C++ <span></span></p>
+                        <p>HMTL</p>
+                        <p>PYTHON & JAVA</p>
+                        <p>LINUX & GIT</p>
+                        <p>DESIGN GRAPHIQUE</p>
+                    </div>      
+                </div>
+            </section>
+            </div>
+        </main>
+    </body>
+    <script>
+        const popUp = document.getElementById("popUp")
+        const menuBtn = document.getElementById("menuBtn")
+        const skillsC = document.getElementById("skillsCnt")
+        const showClass = 'show-popup'
+        const hidePop = 'hide-popup'
+        const showSkills = 'show-skills'
+        const hideSkills = 'hide-skills'
+        let popOpen = false;
+ 
+        menuBtn.addEventListener('click',()=>{
+            if(!popOpen) {
+                popOpen = true
+                popUp.classList.add(showClass)
+                popUp.classList.remove(hidePop)
+                skillsC.classList.add(hideSkills)
+                skillsC.classList.remove(showSkills)
+            }
+            else {
+                popOpen = false
+                popUp.classList.remove(showClass)
+                popUp.classList.add(hidePop)
+                skillsC.classList.remove(hideSkills)
+                skillsC.classList.add(showSkills)
+
+            }
+            console.log("blaba")
+        })
+    </script>
+</html>
